@@ -5,10 +5,9 @@ require_once "../modelos/mdlClientes.php";
 class ajaxClientes{
     public $idClientes;
     public function cargarDatos(){
-        $tabla ="cliente";
         $parametro = "cliente";
         $id = $this->idCliente;
-        $datos = ControladorCliente::ctrlCargarClientes($tabla,$parametro,$id);
+        $datos = ControladorCliente::ctrlCargarClientes($parametro,$id);
         echo json_encode($datos);
     }
 
